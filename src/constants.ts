@@ -2,7 +2,7 @@ export interface Project {
   id: string;
   title: string;
   subtitle: string;
-  description: string;
+  description: string[];
   problem: string;
   solution: string;
   metrics: { label: string; value: string; subLabel: string }[];
@@ -18,7 +18,7 @@ export interface TimelineEvent {
   period: string;
   company: string;
   role: string;
-  description: string;
+  description: string[];
   skills?: string[];
   isCurrent?: boolean;
 }
@@ -204,7 +204,6 @@ export const TIMELINE: TimelineEvent[] = [
     skills: ['SQL', 'ETL', 'POWER_BI', 'AWS', 'SPLUNK'],
   },
 ];
-
 export const SKILLS: SkillCategory[] = [
   {
     id: '1',

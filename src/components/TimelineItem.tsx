@@ -28,9 +28,11 @@ export function TimelineItem({ event, index }: { event: TimelineEvent; index: nu
       </p>
       
       <div className="bg-black p-8 border-2 border-primary/20 group-hover:border-primary group-hover:bg-primary transition-all duration-300 rounded-none">
-        <p className="text-on-surface-variant group-hover:text-black text-base leading-tight transition-colors font-display">
-          {event.description}
-        </p>
+        <ul className="list-disc pl-5 space-y-2 text-on-surface-variant text-sm">
+  {event.description.map((point, i) => (
+    <li key={i}>{point}</li>
+  ))}
+</ul>
         {event.skills && (
           <div className="flex flex-wrap gap-2 mt-6">
             {event.skills.map(skill => (

@@ -178,9 +178,11 @@ export default function HomePage() {
                 <h3 className="font-brutal text-2xl font-bold text-on-surface mb-4 group-hover:text-primary-container transition-colors">
                   {project.title}
                 </h3>
-                <p className="text-on-surface-variant text-sm leading-relaxed mb-8">
-                  {project.description}
-                </p>
+                <ul className="list-disc pl-5 space-y-2 text-on-surface-variant text-sm leading-relaxed mb-8">
+  {project.description.split('. ').map((point, index) => (
+    <li key={index}>{point}</li>
+  ))}
+</ul>
                 
                 <div className="flex flex-wrap gap-2 mb-8">
                   {project.tags.map(tag => (
