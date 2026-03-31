@@ -39,7 +39,10 @@ export const PROJECTS: Project[] = [
     tagId: '01',
     title: 'Natural Language → Structured Data, Instantly',
     subtitle: '',
-    description: '',
+    description: [
+      'Built the Intelligent Data Query System — enabling natural language interaction with enterprise CSV data via LangChain + Gemini agentic pipelines.',
+      'Engineered full-stack MCP framework (server + client) exposing business APIs as structured tools for domain AI agents.'
+    ],
     problem: "Non-technical stakeholders couldn't self-serve insights from enterprise CSV datasets without waiting on data analysts.",
     solution: "Agentic pipeline using LangChain + Gemini to interpret intent, translate to structured queries, and return conversational answers. Modular architecture supports multiple data sources.",
     metrics: [
@@ -62,7 +65,10 @@ export const PROJECTS: Project[] = [
     tagId: '02',
     title: 'Enterprise APIs as Agent-Native Tools',
     subtitle: '',
-    description: '',
+    description: [
+      'Engineered full-stack MCP framework (server + client) exposing business APIs as structured tools for domain AI agents.',
+      'Implemented Model Context Protocol architectures to connect AI to specialized external data silos.'
+    ],
     problem: "AI agents lacked structured, context-aware access to enterprise business logic — leading to hallucinations and poor decision quality.",
     solution: "Full-stack MCP implementation (server + client) that surfaces enterprise APIs as typed, context-rich tools. Orchestrated via LangChain and Google ADK for seamless multi-agent interactions.",
     metrics: [
@@ -85,7 +91,10 @@ export const PROJECTS: Project[] = [
     tagId: '03',
     title: 'Automated Document Understanding at Scale — No Console Required',
     subtitle: '',
-    description: '',
+    description: [
+      'Developed DOC-IQ: a custom document intelligence platform replicating Google Document AI capabilities entirely through API-driven LLM pipelines.',
+      'Designed modular FastAPI backends supporting low-latency, production-scale AI workloads.'
+    ],
     problem: "Teams relied on manual document review or expensive, console-locked cloud services. No programmatic control, no integration path.",
     solution: "Custom LLM-powered pipeline for parsing, extraction, and structured output — fully API-driven, integrated into the DOC-IQ ecosystem for unified document + data intelligence.",
     metrics: [
@@ -103,7 +112,10 @@ export const PROJECTS: Project[] = [
     tagId: '04',
     title: 'Enterprise SQL Query Generation using Llama-3',
     subtitle: '',
-    description: '',
+    description: [
+      'Implemented Text-to-SQL engine using Llama-3 with prompt engineering — processed 500+ complex queries in production.',
+      'Developed advanced Text-to-SQL engine using Llama-3 with sophisticated prompt engineering techniques.'
+    ],
     problem: "Business teams struggled to generate complex SQL queries for data analysis, creating bottlenecks and dependency on technical teams.",
     solution: "Implemented advanced Text-to-SQL engine using Llama-3 with sophisticated prompt engineering techniques. System handles 500+ complex queries with high accuracy, supporting joins, aggregations, and nested queries.",
     metrics: [
@@ -126,7 +138,10 @@ export const PROJECTS: Project[] = [
     tagId: '05',
     title: 'Intelligent Tax FAQ Solutioning System',
     subtitle: '',
-    description: '',
+    description: [
+      'Deployed RAG pipeline for Tax FAQ system, delivering real-time accurate answers and reduction in resolution time.',
+      'Developed efficient TAX FAQ solutioning using RAG pipeline to address customer issues by enhancing experience.'
+    ],
     problem: "Customer service teams struggled with tax-related inquiries, leading to inconsistent responses and poor customer experience.",
     solution: "Developed efficient TAX FAQ solutioning using RAG pipeline to address customer issues by enhancing experience with real-time and accurate responses. System processes tax documents and provides context-aware answers.",
     metrics: [
@@ -149,7 +164,10 @@ export const PROJECTS: Project[] = [
     tagId: '06',
     title: 'Multi-Chatbot Ecosystem with API Integration',
     subtitle: '',
-    description: '',
+    description: [
+      'Built and deployed a customer service chatbot API across all client applications — boosted response times by 40%, satisfaction scores by 25%.',
+      'Developed and managed 3 production chatbots with NLU training and dialogue management.'
+    ],
     problem: "Customer service operations were fragmented across multiple channels with inconsistent responses and slow resolution times.",
     solution: "Developed and managed 3 production chatbots with NLU training and dialogue management for FAQ/Ticketing and API functionalities. Engineered comprehensive API streamlining communication across all client applications.",
     metrics: [

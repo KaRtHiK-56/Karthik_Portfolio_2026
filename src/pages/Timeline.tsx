@@ -4,7 +4,7 @@ import { TimelineItem } from '../components/TimelineItem';
 
 export default function TimelinePage() {
   return (
-    <div className="max-w-7xl mx-auto">
+    <div className="max-w-7xl mx-auto px-6 md:px-12 py-20">
       <section className="relative">
         <div className="mb-12">
           <motion.div 
@@ -20,7 +20,7 @@ export default function TimelinePage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="font-brutal text-6xl md:text-9xl font-black tracking-tighter text-on-surface mb-8 leading-[0.8] uppercase"
+            className="font-brutal text-5xl sm:text-7xl md:text-9xl font-black tracking-tighter text-on-surface mb-8 leading-[0.8] uppercase break-words"
           >
             WHERE<br/>
             <span className="text-primary bg-black px-4 -ml-4 inline-block transform -skew-x-12">I'VE_SHIPPED</span>

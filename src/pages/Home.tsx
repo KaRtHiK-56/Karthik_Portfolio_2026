@@ -21,7 +21,7 @@ export default function HomePage() {
   }, []);
 
   return (
-    <div className="space-y-32">
+    <div className="space-y-32 px-6 md:px-12">
       {/* Hero Section */}
       <section className="min-h-[80vh] flex flex-col justify-center relative">
         <motion.div 
@@ -37,7 +37,7 @@ export default function HomePage() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1 }}
-          className="font-brutal text-6xl md:text-8xl lg:text-9xl font-extrabold tracking-tighter text-on-surface mb-4"
+          className="font-brutal text-5xl sm:text-6xl md:text-8xl lg:text-9xl font-extrabold tracking-tighter text-on-surface mb-4 break-words"
         >
           KARTHIK <span className="gradient-text">L</span>
         </motion.h1>
@@ -50,7 +50,7 @@ export default function HomePage() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.5, ease: "circOut" }}
-              className="font-display text-3xl md:text-5xl font-bold text-primary-container mb-8"
+              className="font-display text-2xl sm:text-3xl md:text-5xl font-bold text-primary-container mb-8"
             >
               {ROLES[roleIndex]}
             </motion.h2>
@@ -64,7 +64,7 @@ export default function HomePage() {
             transition={{ delay: 0.2 }}
             className="space-y-6"
           >
-            <p className="font-display text-2xl text-on-surface-variant max-w-xl leading-relaxed">
+            <p className="font-display text-xl sm:text-2xl text-on-surface-variant max-w-xl leading-relaxed">
               Building enterprise-grade AI solutions with proven impact across TCS and Manhattan Associates. Specialized in LLM systems, autonomous agents, and scalable AI architectures that drive business value.
             </p>
           </motion.div>
@@ -80,9 +80,9 @@ export default function HomePage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 + i * 0.1 }}
-                className="p-6 bg-surface-container-low rounded-xl border border-white/5"
+                className="p-4 sm:p-6 bg-surface-container-low rounded-xl border border-white/5"
               >
-                <div className="font-brutal text-4xl text-primary mb-1">{stat.value}</div>
+                <div className="font-brutal text-3xl sm:text-4xl text-primary mb-1">{stat.value}</div>
                 <div className="font-mono text-[10px] text-slate-500 uppercase tracking-widest">{stat.label}</div>
               </motion.div>
             ))}
@@ -150,14 +150,14 @@ export default function HomePage() {
       </section>
 
       {/* Featured Projects Section */}
-      <section className="py-24 border border-primary-container/20 rounded-[2rem] p-8 md:p-16 bg-surface/30 backdrop-blur-sm relative overflow-hidden">
+      <section className="py-24 border border-primary-container/20 rounded-[2rem] p-6 sm:p-8 md:p-16 bg-surface/30 backdrop-blur-sm relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(0,229,255,0.05),transparent_70%)]"></div>
         
         <div className="text-center mb-16 relative z-10">
-          <h2 className="font-brutal text-5xl md:text-6xl font-extrabold text-primary-container mb-6 tracking-tight">
+          <h2 className="font-brutal text-4xl sm:text-5xl md:text-6xl font-extrabold text-primary-container mb-6 tracking-tight">
             Featured Projects
           </h2>
-          <p className="text-on-surface-variant text-lg max-w-2xl mx-auto font-display">
+          <p className="text-on-surface-variant text-base sm:text-lg max-w-2xl mx-auto font-display">
             Building enterprise AI solutions that deliver real business impact through intelligent systems and automation.
           </p>
         </div>
@@ -170,19 +170,19 @@ export default function HomePage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="group p-8 bg-surface-container-low rounded-2xl border border-secondary-container/30 hover:border-primary-container/50 transition-all duration-500 relative overflow-hidden flex flex-col md:flex-row gap-8"
+              className="group p-6 sm:p-8 bg-surface-container-low rounded-2xl border border-secondary-container/30 hover:border-primary-container/50 transition-all duration-500 relative overflow-hidden flex flex-col md:flex-row gap-8"
             >
               <div className="absolute inset-0 bg-gradient-to-br from-secondary-container/5 to-primary-container/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
               
               <div className="relative z-10 flex flex-col flex-1">
-                <h3 className="font-brutal text-2xl font-bold text-on-surface mb-4 group-hover:text-primary-container transition-colors">
+                <h3 className="font-brutal text-xl sm:text-2xl font-bold text-on-surface mb-4 group-hover:text-primary-container transition-colors">
                   {project.title}
                 </h3>
                 <ul className="list-disc pl-5 space-y-2 text-on-surface-variant text-sm leading-relaxed mb-8">
-  {project.description.split('. ').map((point, index) => (
-    <li key={index}>{point}</li>
-  ))}
-</ul>
+                  {project.description.map((point, index) => (
+                    <li key={index}>{point}</li>
+                  ))}
+                </ul>
                 
                 <div className="flex flex-wrap gap-2 mb-8">
                   {project.tags.map(tag => (
@@ -206,7 +206,7 @@ export default function HomePage() {
         <div className="mt-16 text-center relative z-10">
           <Link 
             to="/projects" 
-            className="inline-flex items-center gap-3 px-10 py-4 rounded-full border border-primary-container/50 text-primary-container font-mono text-sm font-bold hover:bg-primary-container/10 transition-all group"
+            className="inline-flex items-center gap-3 px-8 sm:px-10 py-4 rounded-full border border-primary-container/50 text-primary-container font-mono text-sm font-bold hover:bg-primary-container/10 transition-all group"
           >
             View All Projects <Send className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
           </Link>
@@ -216,22 +216,37 @@ export default function HomePage() {
       {/* Neural Connect Section */}
       <section className="grid grid-cols-1 lg:grid-cols-12 gap-16">
         <div className="lg:col-span-7 space-y-8">
-          <div className="glass-card p-8 rounded-2xl relative overflow-hidden group border border-outline-variant">
+          <div className="glass-card p-6 md:p-8 rounded-2xl relative overflow-hidden group border border-outline-variant">
             <div className="absolute -top-24 -right-24 w-48 h-48 bg-primary-container/15 rounded-full blur-[80px]"></div>
             <div className="absolute -bottom-24 -left-24 w-48 h-48 bg-secondary-container/15 rounded-full blur-[80px]"></div>
             
             <div className="mb-8">
               <div className="flex items-center gap-2 mb-2">
                 <Share2 className="w-5 h-5 text-primary" />
-                <h2 className="font-brutal text-2xl font-bold tracking-tight">NEURAL_CONNECT</h2>
+                <h2 className="font-brutal text-2xl font-bold tracking-tight break-words">NEURAL_CONNECT</h2>
               </div>
               <p className="text-xs text-on-surface-variant font-mono tracking-tight">INITIATE DIRECT ENCRYPTED COMMUNICATION CHANNEL</p>
             </div>
 
-            <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
+            <form 
+              className="space-y-6" 
+              onSubmit={(e) => {
+                e.preventDefault();
+                const formData = new FormData(e.currentTarget);
+                const name = formData.get('name') as string;
+                const email = formData.get('email') as string;
+                const message = formData.get('message') as string;
+                const subject = encodeURIComponent(`Neural Connect from ${name}`);
+                const body = encodeURIComponent(`From: ${name} (${email})\n\n${message}`);
+                const mailtoUrl = `mailto:karthiksurya611@gmail.com?subject=${subject}&body=${body}`;
+                window.location.href = mailtoUrl;
+              }}
+            >
               <div className="space-y-1">
                 <label className="font-mono text-[10px] text-primary tracking-widest uppercase pl-1">Ident_Name</label>
                 <input 
+                  name="name"
+                  required
                   className="w-full bg-surface-container-lowest border-none focus:ring-1 focus:ring-primary-container text-on-surface py-4 px-4 rounded-lg placeholder:text-outline/40 transition-all font-mono text-sm" 
                   placeholder="USER_INPUT_REQUIRED"
                 />
@@ -239,6 +254,8 @@ export default function HomePage() {
               <div className="space-y-1">
                 <label className="font-mono text-[10px] text-primary tracking-widest uppercase pl-1">Network_Address</label>
                 <input 
+                  name="email"
+                  required
                   className="w-full bg-surface-container-lowest border-none focus:ring-1 focus:ring-primary-container text-on-surface py-4 px-4 rounded-lg placeholder:text-outline/40 transition-all font-mono text-sm" 
                   placeholder="EMAIL@DOMAIN.COM"
                   type="email"
@@ -247,12 +264,17 @@ export default function HomePage() {
               <div className="space-y-1">
                 <label className="font-mono text-[10px] text-primary tracking-widest uppercase pl-1">Packet_Payload</label>
                 <textarea 
+                  name="message"
+                  required
                   className="w-full bg-surface-container-lowest border-none focus:ring-1 focus:ring-primary-container text-on-surface py-4 px-4 rounded-lg placeholder:text-outline/40 transition-all font-mono text-sm resize-none" 
                   placeholder="TRANSMIT_MESSAGE_HERE..."
                   rows={4}
                 />
               </div>
-              <button className="w-full bg-gradient-to-r from-primary-container to-secondary-container py-4 rounded-xl font-mono text-sm font-bold tracking-widest text-on-primary hover:opacity-90 transition-all shadow-[0_10px_30px_rgba(0,229,255,0.15)] flex justify-center items-center gap-2">
+              <button 
+                type="submit"
+                className="w-full bg-gradient-to-r from-primary-container to-secondary-container py-4 rounded-xl font-mono text-sm font-bold tracking-widest text-on-primary hover:opacity-90 transition-all shadow-[0_10px_30px_rgba(0,229,255,0.15)] flex justify-center items-center gap-2"
+              >
                 INIT_TRANSMISSION <Send className="w-4 h-4" />
               </button>
             </form>
@@ -260,16 +282,16 @@ export default function HomePage() {
         </div>
 
         <div className="lg:col-span-5 space-y-8">
-          <div className="bg-surface-container-low p-8 rounded-2xl border border-outline-variant">
+          <div className="bg-surface-container-low p-6 sm:p-8 rounded-2xl border border-outline-variant">
             <h4 className="font-mono text-[10px] text-slate-500 tracking-[0.3em] uppercase mb-8 text-center">EXTERNAL_NODES</h4>
-            <div className="grid grid-cols-4 gap-4">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
               {[
-                { name: 'GITHUB', icon: Github },
-                { name: 'LINKEDIN', icon: Linkedin },
-                { name: 'MEDIUM', icon: Edit3 },
-                { name: 'EMAIL', icon: Mail },
+                { name: 'GITHUB', icon: Github, url: 'https://github.com/KaRtHiK-56' },
+                { name: 'LINKEDIN', icon: Linkedin, url: 'https://www.linkedin.com/in/l-karthik/' },
+                { name: 'MEDIUM', icon: Edit3, url: 'https://karthikvegeta.medium.com/' },
+                { name: 'EMAIL', icon: Mail, url: 'mailto:karthiksurya611@gmail.com' },
               ].map(node => (
-                <a key={node.name} href="#" className="flex flex-col items-center gap-3 group">
+                <a key={node.name} href={node.url} target="_blank" rel="noopener noreferrer" className="flex flex-col items-center gap-3 group">
                   <div className="w-12 h-12 flex items-center justify-center rounded-lg bg-surface-container group-hover:bg-primary-container/20 group-hover:shadow-[0_0_15px_rgba(0,229,255,0.2)] transition-all">
                     <node.icon className="w-5 h-5 text-outline group-hover:text-primary-container" />
                   </div>

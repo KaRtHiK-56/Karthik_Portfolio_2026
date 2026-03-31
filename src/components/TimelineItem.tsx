@@ -20,7 +20,7 @@ export function TimelineItem({ event, index }: { event: TimelineEvent; index: nu
       <span className="font-mono text-[10px] font-black text-primary/60 tracking-[0.3em] block mb-2 uppercase">
         {event.period}
       </span>
-      <h3 className="font-brutal text-3xl font-black text-on-surface mb-1 group-hover:text-primary transition-colors uppercase tracking-tighter">
+      <h3 className="font-brutal text-2xl sm:text-3xl font-black text-on-surface mb-1 group-hover:text-primary transition-colors uppercase tracking-tighter break-words">
         {event.company}
       </h3>
       <p className="font-mono text-[10px] text-primary/40 mb-6 uppercase font-black tracking-widest">

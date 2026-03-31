@@ -4,7 +4,7 @@ import { SkillCard } from '../components/SkillCard';
 
 export default function StackPage() {
   return (
-    <div className="max-w-7xl mx-auto">
+    <div className="max-w-7xl mx-auto px-6 md:px-12 py-20">
       <header className="mb-16 relative">
         <motion.div 
           initial={{ opacity: 0, x: -20 }}
