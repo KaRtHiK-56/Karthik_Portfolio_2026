@@ -10,7 +10,7 @@ export default function ContactPage() {
           // CONTACT_NODE
         </div>
         <h1 className="font-brutal text-5xl sm:text-6xl md:text-9xl font-black tracking-tighter leading-[0.8] uppercase break-words">
-          STK_<span className="text-primary bg-black px-4 -ml-4 inline-block transform -skew-x-12">CONTACT</span>
+        <span className="text-primary bg-black px-4 -ml-4 inline-block transform -skew-x-12">CONTACT</span>
         </h1>
         <p className="font-display text-xl sm:text-2xl text-on-surface-variant leading-tight max-w-2xl">
           Initiate direct encrypted communication channel for high-impact AI collaborations.
@@ -22,10 +22,15 @@ export default function ContactPage() {
         <div className="lg:col-span-7">
           <div className="bg-black p-6 sm:p-12 border-2 border-primary relative overflow-hidden group rounded-none shadow-[8px_8px_0px_0px_rgba(0,229,255,1)]">
             <div className="mb-12">
-              <div className="flex items-center gap-4 mb-4">
-                <Share2 className="w-8 h-8 text-primary" />
-                <h2 className="font-brutal text-3xl sm:text-4xl font-black tracking-tighter uppercase break-words">NEURAL_CONNECT</h2>
-              </div>
+              <div className="flex items-center gap-4 mb-4 min-w-0 flex-wrap">
+  <Share2 className="w-8 h-8 text-primary shrink-0" />
+
+  <h2 className="font-brutal text-2xl sm:text-3xl md:text-4xl font-black tracking-tighter uppercase min-w-0">
+    <span className="bg-primary text-black px-3 py-1 inline-block max-w-full break-all">
+      NEURAL_CONNECT
+    </span>
+  </h2>
+</div>
               <p className="text-[10px] text-primary/60 font-mono tracking-[0.4em] uppercase font-black">INITIATE DIRECT ENCRYPTED COMMUNICATION CHANNEL</p>
             </div>
 

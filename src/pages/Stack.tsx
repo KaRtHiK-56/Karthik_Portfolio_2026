@@ -71,7 +71,7 @@ export default function StackPage() {
             >
               <div className="font-mono text-[10px] text-primary mb-2 font-black uppercase tracking-widest">INPUT_LAYER</div>
               <div className="text-sm font-black text-on-surface mb-2 uppercase">Structured Data Streams</div>
-              <div className="text-[10px] text-primary/60 font-mono uppercase tracking-widest">LATENCY: 12ms</div>
+              <div className="text-[10px] text-primary/60 font-mono uppercase tracking-widest">AMOUNT: 50K - 130k</div>
             </motion.div>
             
             <motion.div 
@@ -89,8 +89,52 @@ export default function StackPage() {
             >
               <div className="font-mono text-[10px] text-primary mb-2 font-black uppercase tracking-widest">OUTPUT_LAYER</div>
               <div className="text-sm font-black text-on-surface mb-2 uppercase">Agentic Execution</div>
-              <div className="text-[10px] text-primary/60 font-mono uppercase tracking-widest">ACCURACY: 99.4%</div>
+              <div className="text-[10px] text-primary/60 font-mono uppercase tracking-widest">ORCHESTRATION: Deligated</div>
             </motion.div>
+            <motion.div 
+  whileHover={{ scale: 1.05, x: -10 }}
+  className="bg-primary text-black p-6 border-2 border-primary self-center rounded-none"
+>
+  <div className="font-mono text-[10px] text-black/60 mb-2 font-black uppercase tracking-widest">
+    INTELLIGENCE_LAYER
+  </div>
+  <div className="text-sm font-black mb-2 uppercase">
+    Context Awareness Engine
+  </div>
+  <div className="text-[10px] text-black/60 font-mono uppercase tracking-widest">
+    REASONING: REACT_PROMPT
+  </div>
+</motion.div>
+
+            <motion.div 
+  whileHover={{ scale: 1.05, x: -10 }}
+  className="bg-black p-6 border-2 border-primary/40 self-end rounded-none"
+>
+  <div className="font-mono text-[10px] text-primary mb-2 font-black uppercase tracking-widest">
+    DECISION_ENGINE
+  </div>
+  <div className="text-sm font-black text-on-surface mb-2 uppercase">
+    Dynamic Routing Logic - MCP
+  </div>
+  <div className="text-[10px] text-primary/60 font-mono uppercase tracking-widest">
+    STRATEGY: TOOL_SELECTION
+  </div>
+</motion.div>
+
+            <motion.div 
+  whileHover={{ scale: 1.05, x: -10 }}
+  className="bg-primary text-black p-6 border-2 border-primary self-center rounded-none"
+>
+  <div className="font-mono text-[10px] text-black/60 mb-2 font-black uppercase tracking-widest">
+    OBSERVABILITY
+  </div>
+  <div className="text-sm font-black mb-2 uppercase">
+    Real-time Telemetry
+  </div>
+  <div className="text-[10px] text-black/60 font-mono uppercase tracking-widest">
+    TRACE: DISTRIBUTED
+  </div>
+</motion.div>
           </div>
         </div>
       </section>

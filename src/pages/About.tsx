@@ -22,7 +22,7 @@ export default function AboutPage() {
           className="font-brutal text-5xl sm:text-7xl md:text-9xl font-black tracking-tighter text-on-surface mb-8 leading-[0.8] uppercase break-words"
         >
           About<br/>
-          <span className="text-primary bg-black px-4 -ml-4 inline-block transform -skew-x-12">Karthik_L</span>
+          <span className="text-primary bg-black px-4 -ml-4 inline-block transform -skew-x-12">Karthik</span>
         </motion.h1>
         
         <motion.p 

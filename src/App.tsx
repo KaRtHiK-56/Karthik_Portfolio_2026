@@ -16,10 +16,10 @@ export default function App() {
         <div className="min-h-screen bg-background tech-grid-bg transition-colors duration-300">
           <Navbar />
           
-          <main className="pt-32 pb-20 px-6 md:px-12 relative">
-            {/* Background Orbs */}
-            <div className="fixed top-[-10%] right-[-5%] w-[500px] h-[500px] bg-cyan-500/5 rounded-full blur-[120px] pointer-events-none z-0" />
-            <div className="fixed bottom-[-10%] left-[-5%] w-[400px] h-[400px] bg-purple-500/5 rounded-full blur-[100px] pointer-events-none z-0" />
+          <main className="pt-24 sm:pt-28 md:pt-32 pb-12 sm:pb-16 md:pb-20 px-0 relative">
+            {/* Background Orbs - adjusted for mobile */}
+            <div className="fixed top-[-10%] right-[-10%] sm:right-[-5%] w-[300px] sm:w-[400px] md:w-[500px] h-[300px] sm:h-[400px] md:h-[500px] bg-cyan-500/5 rounded-full blur-[80px] sm:blur-[100px] md:blur-[120px] pointer-events-none z-0" />
+            <div className="fixed bottom-[-10%] left-[-10%] sm:left-[-5%] w-[250px] sm:w-[350px] md:w-[400px] h-[250px] sm:h-[350px] md:h-[400px] bg-purple-500/5 rounded-full blur-[60px] sm:blur-[80px] md:blur-[100px] pointer-events-none z-0" />
             
             <div className="relative z-10">
               <Routes>

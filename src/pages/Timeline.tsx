@@ -16,15 +16,14 @@ export default function TimelinePage() {
             <div className="h-[1px] w-12 bg-surface-variant"></div>
           </motion.div>
           
-          <motion.h1 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1 }}
-            className="font-brutal text-5xl sm:text-7xl md:text-9xl font-black tracking-tighter text-on-surface mb-8 leading-[0.8] uppercase break-words"
-          >
-            WHERE<br/>
-            <span className="text-primary bg-black px-4 -ml-4 inline-block transform -skew-x-12">I'VE_SHIPPED</span>
-          </motion.h1>
+          <motion.h1
+  className="font-brutal text-4xl sm:text-6xl md:text-9xl font-black tracking-tighter text-on-surface mb-8 leading-[0.8] uppercase break-words max-w-full"
+>
+  WHERE<br/>
+  <span className="text-primary bg-black px-4 inline-block transform -skew-x-12 -translate-x-2 max-w-full break-words">
+    I'VE_SHIPPED
+  </span>
+</motion.h1>
           
           <motion.p 
             initial={{ opacity: 0 }}
