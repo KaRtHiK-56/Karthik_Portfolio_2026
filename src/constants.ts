@@ -169,7 +169,11 @@ export const TIMELINE: TimelineEvent[] = [
     period: 'MAR 2025 - PRESENT',
     company: 'MANHATTAN ASSOCIATES',
     role: 'SOFTWARE_ENGINEER',
-    description: 'Architecting neural supply-chain models and optimizing large-scale logistics via generative predictive agents. Leading the development of the Manhattan Agent suite and full-stack MCP frameworks for domain-specific AI orchestration. Designed modular FastAPI backends supporting low-latency, production-scale AI workloads.',
+    description: [
+      'Architecting neural supply-chain models and optimizing large-scale logistics via generative predictive agents.',
+      'Leading development of the Manhattan Agent suite and full-stack MCP frameworks for domain-specific AI orchestration.',
+      'Designed modular FastAPI backends supporting low-latency, production-scale AI workloads.'
+    ],
     skills: ['PYTHON', 'TENSORFLOW', 'LLM_OPS', 'MCP', 'FASTAPI'],
     isCurrent: true,
   },
@@ -178,7 +182,13 @@ export const TIMELINE: TimelineEvent[] = [
     period: 'JUL 2023 - MAR 2025',
     company: 'TATA CONSULTANCY SERVICES',
     role: 'AI_DEVELOPER',
-    description: 'Developed proprietary NLP frameworks for enterprise knowledge graphs and RAG pipelines. Built the Intelligent Data Query System and DOC-IQ platform, reducing query latency by 45% and automating document understanding. Implemented Text-to-SQL engine using Llama-3 with prompt engineering — processed 500+ complex queries in production. Deployed RAG pipeline for Tax FAQ system, delivering real-time accurate answers and cutting resolution time significantly.',
+    description: [
+      'Implemented Text-to-SQL engine using Llama-3 with prompt engineering — processed 500+ complex queries in production.',
+      'Deployed RAG pipeline for Tax FAQ system, delivering real-time accurate answers and reducing resolution time.',
+      'Built and deployed a customer service chatbot API across client applications — improved response times by 40% and satisfaction by 25%.',
+      'Managed 3 production chatbots with NLU training, 10 API integrations, and full test suites.',
+      'Led migration of 15 on-prem servers to AWS — achieved 99.9% uptime and reduced RTO.'
+    ],
     skills: ['NLP', 'LANGCHAIN', 'FASTAPI', 'RAG', 'LLAMA-3'],
   },
   {
@@ -186,7 +196,11 @@ export const TIMELINE: TimelineEvent[] = [
     period: 'FEB 2022 - JUN 2023',
     company: 'TATA CONSULTANCY SERVICES',
     role: 'ANALYST',
-    description: 'Engineered robust data pipelines for Fortune 500 clients. Specialized in ETL automation, real-time streaming analytics, and Power BI dashboarding. Led migration of 15 on-prem servers to AWS — achieved 99.9% uptime, dramatically reduced RTO. Developed Splunk service alert dashboard, significantly improving real-time monitoring capabilities.',
+    description: [
+      'Managed project SLAs ensuring uninterrupted operations and zero business-impact incidents.',
+      'Built Power BI dashboards for incident and SLA reporting — enabled actionable insights.',
+      'Developed Splunk alert dashboards to improve real-time monitoring capabilities.'
+    ],
     skills: ['SQL', 'ETL', 'POWER_BI', 'AWS', 'SPLUNK'],
   },
 ];
