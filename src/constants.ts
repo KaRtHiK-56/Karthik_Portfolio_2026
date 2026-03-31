@@ -192,7 +192,7 @@ export const TIMELINE: TimelineEvent[] = [
       'Leading development of the Manhattan Agent suite and full-stack MCP frameworks for domain-specific AI orchestration.',
       'Designed modular FastAPI backends supporting low-latency, production-scale AI workloads.'
     ],
-    skills: ['PYTHON', 'TENSORFLOW', 'LLM_OPS', 'MCP', 'FASTAPI'],
+    skills: ['PYTHON', 'LANGCHAIN', 'GOOGLE_ADK','LLM_OPS', 'MCP', 'FASTAPI'],
     isCurrent: true,
   },
   {
@@ -219,7 +219,7 @@ export const TIMELINE: TimelineEvent[] = [
       'Built Power BI dashboards for incident and SLA reporting — enabled actionable insights.',
       'Developed Splunk alert dashboards to improve real-time monitoring capabilities.'
     ],
-    skills: ['SQL', 'ETL', 'POWER_BI', 'AWS', 'SPLUNK'],
+    skills: ['SQL', 'ETL', 'POWER_BI', 'SPLUNK'],
   },
 ];
 export const SKILLS: SkillCategory[] = [
