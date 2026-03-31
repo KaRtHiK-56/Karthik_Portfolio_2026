@@ -1,0 +1,52 @@
+import { motion } from 'motion/react';
+import { TIMELINE } from '../constants';
+import { TimelineItem } from '../components/TimelineItem';
+
+export default function TimelinePage() {
+  return (
+    <div className="max-w-7xl mx-auto">
+      <section className="relative">
+        <div className="mb-12">
+          <motion.div 
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            className="flex items-center gap-2 mb-4"
+          >
+            <span className="font-mono text-primary text-[10px] tracking-[0.2em]">PATH_TRACE //</span>
+            <div className="h-[1px] w-12 bg-surface-variant"></div>
+          </motion.div>
+          
+          <motion.h1 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.1 }}
+            className="font-brutal text-6xl md:text-9xl font-black tracking-tighter text-on-surface mb-8 leading-[0.8] uppercase"
+          >
+            WHERE<br/>
+            <span className="text-primary bg-black px-4 -ml-4 inline-block transform -skew-x-12">I'VE_SHIPPED</span>
+          </motion.h1>
+          
+          <motion.p 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.2 }}
+            className="max-w-2xl text-on-surface-variant font-display text-xl leading-tight"
+          >
+            Building AI solutions that drive real business impact across enterprise environments.
+          </motion.p>
+        </div>
+
+        <div className="relative ml-4 md:ml-8 mt-24">
+          {/* Vertical Solid Line */}
+          <div className="absolute left-0 top-0 bottom-0 w-[4px] bg-primary" />
+          
+          <div className="max-w-3xl">
+            {TIMELINE.map((event, index) => (
+              <TimelineItem key={event.id} event={event} index={index} />
+            ))}
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}
