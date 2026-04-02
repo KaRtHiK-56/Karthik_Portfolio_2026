@@ -78,9 +78,20 @@ export default function HomePage() {
               <motion.div
                 key={stat.label}
                 initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.3 + i * 0.1 }}
-                className="p-4 sm:p-5 md:p-6 bg-surface-container-low rounded-xl border border-white/5"
+                animate={{ 
+                  opacity: 1, 
+                  y: [0, -5, 0],
+                }}
+                transition={{ 
+                  opacity: { delay: 0.3 + i * 0.1 },
+                  y: { 
+                    duration: 4, 
+                    repeat: Infinity, 
+                    ease: "easeInOut",
+                    delay: i * 0.5 
+                  }
+                }}
+                className="p-4 sm:p-5 md:p-6 bg-surface-container-low rounded-xl border border-white/5 group hover:border-primary/30 transition-colors"
               >
                 <div className="font-brutal text-2xl sm:text-3xl md:text-4xl text-primary mb-1">{stat.value}</div>
                 <div className="font-mono text-[9px] sm:text-[10px] text-slate-500 uppercase tracking-widest leading-tight">{stat.label}</div>

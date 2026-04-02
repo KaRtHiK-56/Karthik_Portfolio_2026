@@ -27,18 +27,23 @@ export function Navbar() {
       
       <div className="hidden md:flex items-center gap-10">
         {NAV_LINKS.map((link) => (
-          <Link
+          <motion.div
             key={link.path}
-            to={link.path}
-            className={cn(
-              "text-sm tracking-wide transition-all duration-300",
-              location.pathname === link.path 
-                ? "text-cyan-400 font-semibold" 
-                : "text-slate-400 hover:text-white"
-            )}
+            whileHover={{ y: -2 }}
+            transition={{ type: "spring", stiffness: 400, damping: 10 }}
           >
-            {link.name}
-          </Link>
+            <Link
+              to={link.path}
+              className={cn(
+                "text-sm tracking-wide transition-all duration-300 glitch-hover",
+                location.pathname === link.path 
+                  ? "text-cyan-400 font-semibold" 
+                  : "text-slate-400 hover:text-white"
+              )}
+            >
+              {link.name}
+            </Link>
+          </motion.div>
         ))}
       </div>
 

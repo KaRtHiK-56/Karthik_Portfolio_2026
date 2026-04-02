@@ -1,6 +1,9 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
+import { CustomCursor } from './components/CustomCursor';
+import { BackgroundGraphics } from './components/BackgroundGraphics';
+import ScrollToTop from './components/ScrollToTop';
 import { ThemeProvider } from './context/ThemeContext';
 import Home from './pages/Home';
 import About from './pages/About';
@@ -13,7 +16,10 @@ export default function App() {
   return (
     <ThemeProvider>
       <Router>
-        <div className="min-h-screen bg-background tech-grid-bg transition-colors duration-300">
+        <ScrollToTop />
+        <div className="min-h-screen bg-background tech-grid-bg transition-colors duration-300 relative overflow-hidden">
+          <CustomCursor />
+          <BackgroundGraphics />
           <Navbar />
           
           <main className="pt-24 sm:pt-28 md:pt-32 pb-12 sm:pb-16 md:pb-20 px-0 relative">
