@@ -5,20 +5,25 @@ import { ProjectCard } from '../components/ProjectCard';
 export default function ProjectsPage() {
   return (
     <div className="max-w-7xl mx-auto px-6 md:px-12 py-20">
-      <header className="mb-24">
+      <header className="mb-24 space-y-8">
+        <div className="inline-block px-4 py-1 bg-surface-container border-2 border-primary text-[10px] font-mono text-primary tracking-[0.3em] uppercase font-black">
+          // PROJECTS_NODE
+        </div>
         <motion.h1 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="text-6xl md:text-8xl font-bold text-white mb-8 tracking-tighter"
+          transition={{ delay: 0.1 }}
+          className="font-brutal text-5xl sm:text-7xl md:text-9xl font-black tracking-tighter text-on-surface mb-8 leading-[0.8] uppercase break-words"
         >
-          Projects That <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500">Ship</span>
+          Projects That<br/>
+          <span className="text-primary bg-surface-container-highest px-4 -ml-4 inline-block transform -skew-x-12">Ship</span>
         </motion.h1>
         
         <motion.p 
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.2 }}
-          className="max-w-2xl text-slate-400 text-xl font-light leading-relaxed"
+          className="max-w-2xl text-on-surface-variant font-display text-xl leading-tight"
         >
           Each built around a real problem. Measured by impact, not lines of code.
         </motion.p>

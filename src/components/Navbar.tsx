@@ -20,9 +20,9 @@ export function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 w-full z-50 bg-black/80 backdrop-blur-xl border-b border-white/5 flex justify-between items-center px-6 md:px-12 h-20 transition-colors duration-300">
-      <Link to="/" className="text-xl font-bold tracking-tighter text-white font-sans">
-        KARTHIK<span className="text-cyan-400">.AI</span>
+    <nav className="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-xl border-b border-outline/10 flex justify-between items-center px-6 md:px-12 h-20 transition-colors duration-300">
+      <Link to="/" className="text-xl font-bold tracking-tighter text-on-surface font-sans">
+        KARTHIK<span className="text-primary">.AI</span>
       </Link>
       
       <div className="hidden md:flex items-center gap-10">
@@ -37,8 +37,8 @@ export function Navbar() {
               className={cn(
                 "text-sm tracking-wide transition-all duration-300 glitch-hover",
                 location.pathname === link.path 
-                  ? "text-cyan-400 font-semibold" 
-                  : "text-slate-400 hover:text-white"
+                  ? "text-primary font-semibold" 
+                  : "text-on-surface-variant hover:text-on-surface"
               )}
             >
               {link.name}
@@ -50,7 +50,7 @@ export function Navbar() {
       <div className="flex items-center gap-4">
         <button 
           onClick={toggleTheme}
-          className="p-2 rounded-full bg-surface-container-high border border-outline-variant/30 text-primary-container hover:bg-primary-container/10 transition-all"
+          className="p-2 rounded-full bg-surface-container-high border border-outline/20 text-primary hover:bg-primary/10 transition-all"
           aria-label="Toggle theme"
         >
           {theme === 'dark' ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
@@ -58,7 +58,7 @@ export function Navbar() {
 
         <button 
           onClick={() => setIsMenuOpen(!isMenuOpen)}
-          className="md:hidden p-2 text-white"
+          className="md:hidden p-2 text-on-surface"
         >
           {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
         </button>
@@ -70,7 +70,7 @@ export function Navbar() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="absolute top-20 left-0 w-full bg-black border-b border-white/5 p-6 flex flex-col gap-4 md:hidden"
+            className="absolute top-20 left-0 w-full bg-background border-b border-outline/10 p-6 flex flex-col gap-4 md:hidden"
           >
             {NAV_LINKS.map((link) => (
               <Link
@@ -80,8 +80,8 @@ export function Navbar() {
                 className={cn(
                   "text-lg tracking-wide transition-all duration-300",
                   location.pathname === link.path 
-                    ? "text-cyan-400 font-semibold" 
-                    : "text-slate-400 hover:text-white"
+                    ? "text-primary font-semibold" 
+                    : "text-on-surface-variant hover:text-on-surface"
                 )}
               >
                 {link.name}

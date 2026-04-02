@@ -20,7 +20,7 @@ export default function TimelinePage() {
   className="font-brutal text-4xl sm:text-6xl md:text-9xl font-black tracking-tighter text-on-surface mb-8 leading-[0.8] uppercase break-words max-w-full"
 >
   WHERE<br/>
-  <span className="text-primary bg-black px-4 inline-block transform -skew-x-12 -translate-x-2 max-w-full break-words">
+  <span className="text-primary bg-surface-container-highest px-4 inline-block transform -skew-x-12 -translate-x-2 max-w-full break-words">
     I'VE_SHIPPED
   </span>
 </motion.h1>

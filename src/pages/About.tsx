@@ -22,7 +22,7 @@ export default function AboutPage() {
           className="font-brutal text-5xl sm:text-7xl md:text-9xl font-black tracking-tighter text-on-surface mb-8 leading-[0.8] uppercase break-words"
         >
           About<br/>
-          <span className="text-primary bg-black px-4 -ml-4 inline-block transform -skew-x-12">Karthik</span>
+          <span className="text-primary bg-surface-container-highest px-4 -ml-4 inline-block transform -skew-x-12">Karthik</span>
         </motion.h1>
         
         <motion.p 
@@ -38,15 +38,15 @@ export default function AboutPage() {
       {/* Bio */}
       <section className="grid grid-cols-1 md:grid-cols-12 gap-12 items-start">
         <div className="md:col-span-4">
-          <div className="aspect-square rounded-none overflow-hidden border-2 border-primary bg-black relative group">
+          <div className="aspect-square rounded-none overflow-hidden border-2 border-primary bg-surface relative group">
             <img 
               src="https://picsum.photos/seed/karthik/600/600" 
               alt="Karthik L" 
               className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
               referrerPolicy="no-referrer"
             />
-            <div className="absolute inset-0 bg-black/40 opacity-60"></div>
-            <div className="absolute bottom-6 left-6 bg-primary text-black px-4 py-2 transform -skew-x-12">
+            <div className="absolute inset-0 bg-background/40 opacity-60"></div>
+            <div className="absolute bottom-6 left-6 bg-primary text-on-primary px-4 py-2 transform -skew-x-12">
               <h2 className="font-brutal text-2xl font-black uppercase">Karthik L</h2>
               <p className="font-mono text-[10px] font-black tracking-widest">AI_ENGINEER_V4</p>
             </div>
@@ -97,11 +97,11 @@ export default function AboutPage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="p-8 bg-black border-2 border-primary/20 flex flex-col items-center text-center gap-4 group hover:border-primary hover:bg-primary transition-all rounded-none"
+              className="p-8 bg-surface-container border-2 border-primary/20 flex flex-col items-center text-center gap-4 group hover:border-primary hover:bg-primary transition-all rounded-none"
             >
               <div className="text-4xl mb-2 group-hover:scale-125 transition-transform">{strength.emoji}</div>
-              <strength.icon className="w-8 h-8 text-primary group-hover:text-black transition-colors" />
-              <h4 className="font-mono text-[10px] font-black tracking-[0.3em] uppercase group-hover:text-black">{strength.title}</h4>
+              <strength.icon className="w-8 h-8 text-primary group-hover:text-on-primary transition-colors" />
+              <h4 className="font-mono text-[10px] font-black tracking-[0.3em] uppercase group-hover:text-on-primary">{strength.title}</h4>
             </motion.div>
           ))}
         </div>

@@ -47,27 +47,27 @@ export default function StackPage() {
           <h2 className="font-brutal text-4xl font-bold text-on-surface">Neural Architecture Map</h2>
         </div>
         
-        <div className="bg-black p-6 md:p-12 border-2 border-primary/20 relative overflow-hidden min-h-[400px] rounded-none">
+        <div className="bg-surface-container p-6 md:p-12 border-2 border-outline/20 relative overflow-hidden min-h-[400px] rounded-none">
           <div className="absolute inset-0 flex items-center justify-center opacity-10">
             <svg className="w-full h-full" viewBox="0 0 800 400" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="400" cy="200" r="100" stroke="#00e5ff" strokeDasharray="8 8" strokeWidth="2" />
-              <circle cx="400" cy="200" r="150" stroke="#00e5ff" strokeDasharray="4 4" strokeWidth="1" />
-              <line x1="100" y1="100" x2="400" y2="200" stroke="#00e5ff" strokeWidth="2" opacity="0.2" />
-              <line x1="700" y1="300" x2="400" y2="200" stroke="#00e5ff" strokeWidth="2" opacity="0.2" />
-              <line x1="100" y1="300" x2="400" y2="200" stroke="#00e5ff" strokeWidth="2" opacity="0.2" />
-              <line x1="700" y1="100" x2="400" y2="200" stroke="#00e5ff" strokeWidth="2" opacity="0.2" />
-              <rect x="96" y="96" width="8" height="8" fill="#00e5ff" />
-              <rect x="696" y="296" width="8" height="8" fill="#00e5ff" />
-              <rect x="96" y="296" width="8" height="8" fill="#00e5ff" />
-              <rect x="696" y="96" width="8" height="8" fill="#00e5ff" />
-              <rect x="394" y="194" width="12" height="12" fill="#00e5ff" />
+              <circle cx="400" cy="200" r="100" stroke="currentColor" className="text-primary" strokeDasharray="8 8" strokeWidth="2" />
+              <circle cx="400" cy="200" r="150" stroke="currentColor" className="text-primary" strokeDasharray="4 4" strokeWidth="1" />
+              <line x1="100" y1="100" x2="400" y2="200" stroke="currentColor" className="text-primary" strokeWidth="2" opacity="0.2" />
+              <line x1="700" y1="300" x2="400" y2="200" stroke="currentColor" className="text-primary" strokeWidth="2" opacity="0.2" />
+              <line x1="100" y1="300" x2="400" y2="200" stroke="currentColor" className="text-primary" strokeWidth="2" opacity="0.2" />
+              <line x1="700" y1="100" x2="400" y2="200" stroke="currentColor" className="text-primary" strokeWidth="2" opacity="0.2" />
+              <rect x="96" y="96" width="8" height="8" fill="currentColor" className="text-primary" />
+              <rect x="696" y="296" width="8" height="8" fill="currentColor" className="text-primary" />
+              <rect x="96" y="296" width="8" height="8" fill="currentColor" className="text-primary" />
+              <rect x="696" y="96" width="8" height="8" fill="currentColor" className="text-primary" />
+              <rect x="394" y="194" width="12" height="12" fill="currentColor" className="text-primary" />
             </svg>
           </div>
           
           <div className="relative z-10 grid grid-cols-1 md:grid-cols-3 gap-6 h-full">
             <motion.div 
               whileHover={{ scale: 1.05, x: 10 }}
-              className="bg-black p-6 border-2 border-primary/40 self-start rounded-none"
+              className="bg-surface-container-low p-6 border-2 border-outline/20 self-start rounded-none"
             >
               <div className="font-mono text-[10px] text-primary mb-2 font-black uppercase tracking-widest">INPUT_LAYER</div>
               <div className="text-sm font-black text-on-surface mb-2 uppercase">Structured Data Streams</div>
@@ -76,65 +76,65 @@ export default function StackPage() {
             
             <motion.div 
               whileHover={{ scale: 1.05, y: -10 }}
-              className="bg-primary text-black p-6 border-2 border-primary self-center rounded-none"
+              className="bg-primary text-on-primary p-6 border-2 border-primary self-center rounded-none"
             >
-              <div className="font-mono text-[10px] text-black/60 mb-2 font-black uppercase tracking-widest">PROCESSING_UNIT</div>
+              <div className="font-mono text-[10px] text-on-primary/60 mb-2 font-black uppercase tracking-widest">PROCESSING_UNIT</div>
               <div className="text-sm font-black mb-2 uppercase">Multi-Agent Orchestrator</div>
-              <div className="text-[10px] text-black/60 font-mono uppercase tracking-widest">THROUGHPUT: HIGH</div>
+              <div className="text-[10px] text-on-primary/60 font-mono uppercase tracking-widest">THROUGHPUT: HIGH</div>
             </motion.div>
             
             <motion.div 
               whileHover={{ scale: 1.05, x: -10 }}
-              className="bg-black p-6 border-2 border-primary/40 self-end rounded-none"
+              className="bg-surface-container-low p-6 border-2 border-outline/20 self-end rounded-none"
             >
               <div className="font-mono text-[10px] text-primary mb-2 font-black uppercase tracking-widest">OUTPUT_LAYER</div>
               <div className="text-sm font-black text-on-surface mb-2 uppercase">Agentic Execution</div>
               <div className="text-[10px] text-primary/60 font-mono uppercase tracking-widest">ORCHESTRATION: Deligated</div>
             </motion.div>
             <motion.div 
-  whileHover={{ scale: 1.05, x: -10 }}
-  className="bg-primary text-black p-6 border-2 border-primary self-center rounded-none"
->
-  <div className="font-mono text-[10px] text-black/60 mb-2 font-black uppercase tracking-widest">
-    INTELLIGENCE_LAYER
-  </div>
-  <div className="text-sm font-black mb-2 uppercase">
-    Context Awareness Engine
-  </div>
-  <div className="text-[10px] text-black/60 font-mono uppercase tracking-widest">
-    REASONING: REACT_PROMPT
-  </div>
-</motion.div>
+              whileHover={{ scale: 1.05, x: -10 }}
+              className="bg-primary text-on-primary p-6 border-2 border-primary self-center rounded-none"
+            >
+              <div className="font-mono text-[10px] text-on-primary/60 mb-2 font-black uppercase tracking-widest">
+                INTELLIGENCE_LAYER
+              </div>
+              <div className="text-sm font-black mb-2 uppercase">
+                Context Awareness Engine
+              </div>
+              <div className="text-[10px] text-on-primary/60 font-mono uppercase tracking-widest">
+                REASONING: REACT_PROMPT
+              </div>
+            </motion.div>
 
             <motion.div 
-  whileHover={{ scale: 1.05, x: -10 }}
-  className="bg-black p-6 border-2 border-primary/40 self-end rounded-none"
->
-  <div className="font-mono text-[10px] text-primary mb-2 font-black uppercase tracking-widest">
-    DECISION_ENGINE
-  </div>
-  <div className="text-sm font-black text-on-surface mb-2 uppercase">
-    Dynamic Routing Logic - MCP
-  </div>
-  <div className="text-[10px] text-primary/60 font-mono uppercase tracking-widest">
-    STRATEGY: TOOL_SELECTION
-  </div>
-</motion.div>
+              whileHover={{ scale: 1.05, x: -10 }}
+              className="bg-surface-container-low p-6 border-2 border-outline/20 self-end rounded-none"
+            >
+              <div className="font-mono text-[10px] text-primary mb-2 font-black uppercase tracking-widest">
+                DECISION_ENGINE
+              </div>
+              <div className="text-sm font-black text-on-surface mb-2 uppercase">
+                Dynamic Routing Logic - MCP
+              </div>
+              <div className="text-[10px] text-primary/60 font-mono uppercase tracking-widest">
+                STRATEGY: TOOL_SELECTION
+              </div>
+            </motion.div>
 
             <motion.div 
-  whileHover={{ scale: 1.05, x: -10 }}
-  className="bg-primary text-black p-6 border-2 border-primary self-center rounded-none"
->
-  <div className="font-mono text-[10px] text-black/60 mb-2 font-black uppercase tracking-widest">
-    OBSERVABILITY
-  </div>
-  <div className="text-sm font-black mb-2 uppercase">
-    Real-time Telemetry
-  </div>
-  <div className="text-[10px] text-black/60 font-mono uppercase tracking-widest">
-    TRACE: DISTRIBUTED
-  </div>
-</motion.div>
+              whileHover={{ scale: 1.05, x: -10 }}
+              className="bg-primary text-on-primary p-6 border-2 border-primary self-center rounded-none"
+            >
+              <div className="font-mono text-[10px] text-on-primary/60 mb-2 font-black uppercase tracking-widest">
+                OBSERVABILITY
+              </div>
+              <div className="text-sm font-black mb-2 uppercase">
+                Real-time Telemetry
+              </div>
+              <div className="text-[10px] text-on-primary/60 font-mono uppercase tracking-widest">
+                TRACE: DISTRIBUTED
+              </div>
+            </motion.div>
           </div>
         </div>
       </section>

@@ -27,7 +27,7 @@ export function TimelineItem({ event, index }: { event: TimelineEvent; index: nu
         ROLE: {event.role}
       </p>
       
-      <div className="bg-black p-8 border-2 border-primary/20 group-hover:border-primary group-hover:bg-primary transition-all duration-300 rounded-none">
+      <div className="bg-surface-container p-8 border-2 border-primary/20 group-hover:border-primary group-hover:bg-primary transition-all duration-300 rounded-none">
         <ul className="list-disc pl-5 space-y-2 text-on-surface-variant text-sm">
   {event.description.map((point, i) => (
     <li key={i}>{point}</li>

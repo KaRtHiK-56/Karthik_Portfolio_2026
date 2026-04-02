@@ -6,11 +6,11 @@ export default function ContactPage() {
     <div className="max-w-6xl mx-auto py-12 px-6 md:px-12 space-y-24">
       {/* Header */}
       <section className="space-y-8">
-        <div className="inline-block px-4 py-1 bg-black border-2 border-primary text-[10px] font-mono text-primary tracking-[0.3em] uppercase font-black">
+        <div className="inline-block px-4 py-1 bg-surface-container border-2 border-primary text-[10px] font-mono text-primary tracking-[0.3em] uppercase font-black">
           // CONTACT_NODE
         </div>
         <h1 className="font-brutal text-5xl sm:text-6xl md:text-9xl font-black tracking-tighter leading-[0.8] uppercase break-words">
-        <span className="text-primary bg-black px-4 -ml-4 inline-block transform -skew-x-12">CONTACT</span>
+        <span className="text-primary bg-surface-container-highest px-4 -ml-4 inline-block transform -skew-x-12">CONTACT</span>
         </h1>
         <p className="font-display text-xl sm:text-2xl text-on-surface-variant leading-tight max-w-2xl">
           Initiate direct encrypted communication channel for high-impact AI collaborations.
@@ -20,13 +20,13 @@ export default function ContactPage() {
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
         {/* Form */}
         <div className="lg:col-span-7">
-          <div className="bg-black p-6 sm:p-12 border-2 border-primary relative overflow-hidden group rounded-none shadow-[8px_8px_0px_0px_rgba(0,229,255,1)]">
+          <div className="bg-surface-container p-6 sm:p-12 border-2 border-primary relative overflow-hidden group rounded-none shadow-[8px_8px_0px_0px_rgba(var(--primary-rgb),1)]">
             <div className="mb-12">
               <div className="flex items-center gap-4 mb-4 min-w-0 flex-wrap">
   <Share2 className="w-8 h-8 text-primary shrink-0" />
 
   <h2 className="font-brutal text-2xl sm:text-3xl md:text-4xl font-black tracking-tighter uppercase min-w-0">
-    <span className="bg-primary text-black px-3 py-1 inline-block max-w-full break-all">
+    <span className="bg-primary text-on-primary px-3 py-1 inline-block max-w-full break-all">
       NEURAL_CONNECT
     </span>
   </h2>
@@ -53,7 +53,7 @@ export default function ContactPage() {
                 <input 
                   name="name"
                   required
-                  className="w-full bg-black border-2 border-primary/20 focus:border-primary text-on-surface py-6 px-8 rounded-none placeholder:text-primary/20 transition-all font-mono text-sm outline-none uppercase font-black" 
+                  className="w-full bg-surface-container-low border-2 border-primary/20 focus:border-primary text-on-surface py-6 px-8 rounded-none placeholder:text-primary/20 transition-all font-mono text-sm outline-none uppercase font-black" 
                   placeholder="USER_INPUT_REQUIRED"
                 />
               </div>
@@ -62,7 +62,7 @@ export default function ContactPage() {
                 <input 
                   name="email"
                   required
-                  className="w-full bg-black border-2 border-primary/20 focus:border-primary text-on-surface py-6 px-8 rounded-none placeholder:text-primary/20 transition-all font-mono text-sm outline-none uppercase font-black" 
+                  className="w-full bg-surface-container-low border-2 border-primary/20 focus:border-primary text-on-surface py-6 px-8 rounded-none placeholder:text-primary/20 transition-all font-mono text-sm outline-none uppercase font-black" 
                   placeholder="EMAIL@DOMAIN.COM"
                   type="email"
                 />
@@ -72,12 +72,12 @@ export default function ContactPage() {
                 <textarea 
                   name="message"
                   required
-                  className="w-full bg-black border-2 border-primary/20 focus:border-primary text-on-surface py-6 px-8 rounded-none placeholder:text-primary/20 transition-all font-mono text-sm outline-none resize-none uppercase font-black" 
+                  className="w-full bg-surface-container-low border-2 border-primary/20 focus:border-primary text-on-surface py-6 px-8 rounded-none placeholder:text-primary/20 transition-all font-mono text-sm outline-none resize-none uppercase font-black" 
                   placeholder="TRANSMIT_MESSAGE_HERE..."
                   rows={6}
                 />
               </div>
-              <button type="submit" className="w-full bg-primary py-6 rounded-none font-mono text-base font-black tracking-[0.3em] text-black hover:bg-white transition-all flex justify-center items-center gap-4 group uppercase border-2 border-primary">
+              <button type="submit" className="w-full bg-primary py-6 rounded-none font-mono text-base font-black tracking-[0.3em] text-on-primary hover:bg-on-surface hover:text-surface transition-all flex justify-center items-center gap-4 group uppercase border-2 border-primary">
                 INIT_TRANSMISSION <Send className="w-6 h-6 group-hover:translate-x-2 group-hover:-translate-y-2 transition-transform" />
               </button>
             </form>
@@ -86,7 +86,7 @@ export default function ContactPage() {
 
         {/* Nodes */}
         <div className="lg:col-span-5 space-y-12">
-          <div className="bg-black p-6 sm:p-12 border-2 border-primary rounded-none">
+          <div className="bg-surface-container p-6 sm:p-12 border-2 border-primary rounded-none">
             <h4 className="font-mono text-[10px] text-primary/40 tracking-[0.5em] uppercase mb-16 text-center font-black">EXTERNAL_NODES</h4>
             <div className="grid grid-cols-2 gap-4 sm:gap-8">
               {[
@@ -100,18 +100,18 @@ export default function ContactPage() {
                   href={node.url} 
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex flex-col items-center gap-4 sm:gap-6 p-4 sm:p-8 rounded-none bg-black border-2 border-primary/20 hover:border-primary hover:bg-primary transition-all group"
+                  className="flex flex-col items-center gap-4 sm:gap-6 p-4 sm:p-8 rounded-none bg-surface-container-low border-2 border-primary/20 hover:border-primary hover:bg-primary transition-all group"
                 >
-                  <div className="w-12 h-12 sm:w-16 h-16 flex items-center justify-center rounded-none bg-primary/10 group-hover:bg-black transition-all">
-                    <node.icon className="w-6 h-6 sm:w-8 h-8 text-primary group-hover:text-primary" />
+                  <div className="w-12 h-12 sm:w-16 h-16 flex items-center justify-center rounded-none bg-primary/10 group-hover:bg-on-surface transition-all">
+                    <node.icon className="w-6 h-6 sm:w-8 h-8 text-primary group-hover:text-surface" />
                   </div>
-                  <span className="font-mono text-[9px] sm:text-[10px] font-black tracking-[0.2em] text-primary/40 group-hover:text-black transition-colors">{node.name}</span>
+                  <span className="font-mono text-[9px] sm:text-[10px] font-black tracking-[0.2em] text-primary/40 group-hover:text-on-surface transition-colors">{node.name}</span>
                 </a>
               ))}
             </div>
           </div>
 
-          <div className="p-12 bg-black border-2 border-primary rounded-none relative overflow-hidden group">
+          <div className="p-12 bg-surface-container border-2 border-primary rounded-none relative overflow-hidden group">
             <h5 className="font-mono text-[10px] text-primary mb-8 tracking-[0.4em] uppercase font-black">System_Status</h5>
             <div className="space-y-4">
               <div className="flex justify-between items-center border-b border-primary/10 pb-4">

@@ -17,7 +17,7 @@ export function SkillCard({ category, index }: { category: SkillCategory; index:
       initial={{ opacity: 0, scale: 0.95 }}
       whileInView={{ opacity: 1, scale: 1 }}
       viewport={{ once: true }}
-      className={`bg-black p-8 border-2 border-primary/20 hover:border-primary transition-all duration-300 rounded-none relative overflow-hidden ${
+      className={`bg-surface-container p-8 border-2 border-outline/20 hover:border-primary transition-all duration-300 rounded-none relative overflow-hidden ${
         category.id === '1' ? 'md:col-span-8' : 'md:col-span-4'
       }`}
     >
@@ -74,7 +74,7 @@ export function SkillCard({ category, index }: { category: SkillCategory; index:
             {category.tags && (
               <div className="flex flex-wrap gap-2 mt-6">
                 {category.tags.map(tag => (
-                  <span key={tag} className="px-3 py-1 bg-primary text-black font-mono text-[10px] font-black uppercase tracking-widest">
+                  <span key={tag} className="px-3 py-1 bg-primary text-on-primary font-mono text-[10px] font-black uppercase tracking-widest">
                     {tag}
                   </span>
                 ))}

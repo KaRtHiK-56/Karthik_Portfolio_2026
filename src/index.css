@@ -93,12 +93,12 @@
   --on-secondary: #ffffff;
   --on-secondary-container: #2e1065;
 
-  --on-surface: #1a1a1a;
-  --on-surface-variant: #4a4a4a;
-  --outline: #adb5bd;
-  --outline-variant: #dee2e6;
+  --on-surface: #0f172a;
+  --on-surface-variant: #475569;
+  --outline: #cbd5e1;
+  --outline-variant: #e2e8f0;
 
-  --glass-opacity-val: 90%;
+  --glass-opacity-val: 40%;
 }
 
 /*---------------------------------*/
