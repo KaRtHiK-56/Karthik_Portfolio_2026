@@ -491,9 +491,53 @@ html, body {
   }
 }
 
-/* Glitch Text Effect */
-.glitch-hover:hover {
-  animation: glitch 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
+@layer utilities {
+  /* Glitch Text Effect */
+  .glitch-hover:hover {
+    animation: glitch 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
+  }
+
+  /* AI Focused Utilities */
+  .ai-data-stream {
+    background: linear-gradient(180deg, 
+      transparent 0%, 
+      color-mix(in srgb, var(--primary) 20%, transparent) 50%, 
+      transparent 100%);
+    background-size: 100% 200%;
+    animation: dataStream 4s linear infinite;
+  }
+
+  .ai-neural-node {
+    @apply relative flex items-center justify-center;
+  }
+
+  .ai-neural-node::before {
+    content: '';
+    @apply absolute inset-0 rounded-full bg-primary/20 animate-ping;
+  }
+
+  .ai-prompt-cursor::after {
+    content: '_';
+    @apply animate-pulse text-primary font-black;
+  }
+
+  .ai-scanline {
+    @apply pointer-events-none fixed inset-0 z-50;
+    background: linear-gradient(
+      to bottom,
+      transparent 50%,
+      rgba(var(--primary-rgb), 0.02) 50%
+    );
+    background-size: 100% 4px;
+  }
+
+  .ai-glow-primary {
+    filter: drop-shadow(0 0 8px rgba(var(--primary-rgb), 0.4));
+  }
+
+  .ai-glow-secondary {
+    filter: drop-shadow(0 0 8px rgba(var(--secondary-rgb), 0.4));
+  }
 }
 
 @keyframes glitch {
@@ -503,4 +547,9 @@ html, body {
   60% { transform: translate(2px, 2px); }
   80% { transform: translate(2px, -2px); }
   100% { transform: translate(0); }
+}
+
+@keyframes dataStream {
+  0% { background-position: 0% -100%; }
+  100% { background-position: 0% 100%; }
 }

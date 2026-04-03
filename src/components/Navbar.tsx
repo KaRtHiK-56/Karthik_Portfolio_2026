@@ -48,6 +48,11 @@ export function Navbar() {
       </div>
 
       <div className="flex items-center gap-4">
+        <div className="hidden lg:flex items-center gap-3 px-4 py-1.5 bg-surface-container-low border border-outline/10 rounded-full">
+          <span className="flex h-1.5 w-1.5 rounded-full bg-primary animate-pulse"></span>
+          <span className="font-mono text-[10px] tracking-[0.2em] text-primary uppercase font-black">AI_CORE_ONLINE</span>
+        </div>
+
         <button 
           onClick={toggleTheme}
           className="p-2 rounded-full bg-surface-container-high border border-outline/20 text-primary hover:bg-primary/10 transition-all"

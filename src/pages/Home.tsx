@@ -21,16 +21,23 @@ export default function HomePage() {
   }, []);
 
   return (
-    <div className="space-y-20 sm:space-y-32 px-4 sm:px-6 md:px-12">
+    <div className="space-y-20 sm:space-y-32 px-4 sm:px-6 md:px-12 relative">
+      {/* AI Scanline Overlay */}
+      <div className="ai-scanline"></div>
+
       {/* Hero Section */}
       <section className="min-h-[70vh] sm:min-h-[80vh] flex flex-col justify-center relative pt-8 sm:pt-0">
+        <div className="absolute top-0 right-0 w-full h-full pointer-events-none opacity-10 overflow-hidden">
+          <div className="ai-data-stream absolute inset-0"></div>
+        </div>
+
         <motion.div 
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           className="mb-4 sm:mb-6 flex items-center gap-2 sm:gap-4 px-3 sm:px-4 py-2 w-fit bg-surface-container-low rounded-lg border border-outline/10"
         >
-          <span className="flex h-2 w-2 rounded-full bg-primary-container animate-pulse"></span>
-          <span className="font-mono text-[8px] sm:text-[10px] tracking-widest text-primary uppercase">STATUS_ACTIVE</span>
+          <span className="flex h-2 w-2 rounded-full bg-primary animate-pulse"></span>
+          <span className="font-mono text-[8px] sm:text-[10px] tracking-widest text-primary uppercase font-black">AI_SYSTEM_LOADED // v4.0.2</span>
         </motion.div>
 
         <motion.h1 
@@ -57,23 +64,31 @@ export default function HomePage() {
           </AnimatePresence>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12 items-start md:items-end mt-4 sm:mt-0">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 sm:gap-12 items-start md:items-end mt-4 sm:mt-0">
           <motion.div 
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2 }}
-            className="space-y-4 sm:space-y-6"
+            className="md:col-span-7 space-y-6"
           >
             <p className="font-display text-base sm:text-lg md:text-xl lg:text-2xl text-on-surface-variant max-w-xl leading-relaxed">
               Building enterprise-grade AI solutions with proven impact across TCS and Manhattan Associates. Specialized in LLM systems, autonomous agents, and scalable AI architectures that drive business value.
             </p>
+            
+            {/* System Log Feed */}
+            <div className="hidden sm:block bg-surface-container-lowest border border-outline/10 p-4 rounded-none font-mono text-[10px] text-primary/40 space-y-1 max-w-md">
+              <div className="flex gap-4"><span className="text-primary/20">[09:38:10]</span> <span>INITIALIZING_NEURAL_ENGINE...</span></div>
+              <div className="flex gap-4"><span className="text-primary/20">[09:38:11]</span> <span>LOADING_KNOWLEDGE_GRAPHS...</span></div>
+              <div className="flex gap-4"><span className="text-primary/20">[09:38:12]</span> <span className="text-primary/60">UPLINK_STABLE // HOSUR_NODE_ACTIVE</span></div>
+              <div className="flex gap-4"><span className="text-primary/20">[09:38:13]</span> <span className="ai-prompt-cursor">READY_FOR_INPUT</span></div>
+            </div>
           </motion.div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-2 gap-3 sm:gap-4">
+          <div className="md:col-span-5 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-2 gap-3 sm:gap-4">
             {[
-              { label: 'Years Experience', value: '4+' },
-              { label: 'Efficiency Gain', value: '40%' },
-              { label: 'System Uptime', value: '99.9%' }
+              { label: 'Experience', value: '4+' },
+              { label: 'Efficiency_Gain', value: '40%' },
+              { label: 'System_upTime', value: '99.98%' }
             ].map((stat, i) => (
               <motion.div
                 key={stat.label}

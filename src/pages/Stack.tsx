@@ -21,14 +21,14 @@ export default function StackPage() {
           transition={{ delay: 0.1 }}
           className="font-brutal text-6xl md:text-9xl font-black tracking-tighter text-on-surface mb-8 leading-[0.8] uppercase"
         >
-          MY <span className="text-primary bg-black px-4 -ml-4 inline-block transform -skew-x-12">ARSENAL</span>
+          TECH <span className="text-primary bg-surface-container-highest px-4 -ml-4 inline-block transform -skew-x-12 ai-glow-primary">STACK</span>
         </motion.h1>
         
         <motion.p 
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.2 }}
-          className="max-w-2xl text-on-surface-variant font-body text-lg leading-relaxed"
+          className="max-w-2xl text-on-surface-variant font-display text-2xl leading-tight ai-prompt-cursor"
         >
           Carefully selected tools — each chosen for production-grade performance.
         </motion.p>
@@ -41,14 +41,15 @@ export default function StackPage() {
       </div>
 
       {/* Neural Architecture Map Section */}
-      <section className="mt-24">
-        <div className="flex flex-col items-center text-center mb-12">
-          <div className="font-mono text-xs text-primary mb-2 uppercase tracking-widest">VISUAL_HEURISTICS</div>
-          <h2 className="font-brutal text-4xl font-bold text-on-surface">Neural Architecture Map</h2>
+      <section className="mt-24 relative overflow-hidden">
+        <div className="absolute inset-0 ai-data-stream opacity-5 pointer-events-none"></div>
+        <div className="flex flex-col items-center text-center mb-12 relative z-10">
+          <div className="font-mono text-[10px] text-primary mb-2 uppercase tracking-[0.5em] font-black">VISUAL_HEURISTICS</div>
+          <h2 className="font-brutal text-3xl sm:text-5xl md:text-7xl font-black text-on-surface uppercase tracking-tighter break-all sm:break-normal max-w-full">NEURAL_ARCHITECTURE</h2>
         </div>
         
-        <div className="bg-surface-container p-6 md:p-12 border-2 border-outline/20 relative overflow-hidden min-h-[400px] rounded-none">
-          <div className="absolute inset-0 flex items-center justify-center opacity-10">
+        <div className="bg-surface-container p-6 md:p-12 border-2 border-primary relative overflow-hidden min-h-[400px] rounded-none shadow-[8px_8px_0px_0px_rgba(var(--primary-rgb),0.1)]">
+          <div className="absolute inset-0 flex items-center justify-center opacity-20">
             <svg className="w-full h-full" viewBox="0 0 800 400" fill="none" xmlns="http://www.w3.org/2000/svg">
               <circle cx="400" cy="200" r="100" stroke="currentColor" className="text-primary" strokeDasharray="8 8" strokeWidth="2" />
               <circle cx="400" cy="200" r="150" stroke="currentColor" className="text-primary" strokeDasharray="4 4" strokeWidth="1" />

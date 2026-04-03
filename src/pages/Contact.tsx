@@ -5,14 +5,16 @@ export default function ContactPage() {
   return (
     <div className="max-w-6xl mx-auto py-12 px-6 md:px-12 space-y-24">
       {/* Header */}
-      <section className="space-y-8">
+      <section className="space-y-8 relative">
+        <div className="absolute -top-20 -left-20 w-64 h-64 bg-primary/5 rounded-full blur-[100px] pointer-events-none"></div>
+        
         <div className="inline-block px-4 py-1 bg-surface-container border-2 border-primary text-[10px] font-mono text-primary tracking-[0.3em] uppercase font-black">
-          // CONTACT_NODE
+          // NEURAL_UPLINK_ESTABLISHED
         </div>
         <h1 className="font-brutal text-5xl sm:text-6xl md:text-9xl font-black tracking-tighter leading-[0.8] uppercase break-words">
-        <span className="text-primary bg-surface-container-highest px-4 -ml-4 inline-block transform -skew-x-12">CONTACT</span>
+        <span className="text-primary bg-surface-container-highest px-4 -ml-4 inline-block transform -skew-x-12 ai-glow-primary">CONNECT</span>
         </h1>
-        <p className="font-display text-xl sm:text-2xl text-on-surface-variant leading-tight max-w-2xl">
+        <p className="font-display text-xl sm:text-2xl text-on-surface-variant leading-tight max-w-2xl ai-prompt-cursor">
           Initiate direct encrypted communication channel for high-impact AI collaborations.
         </p>
       </section>
@@ -20,22 +22,25 @@ export default function ContactPage() {
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
         {/* Form */}
         <div className="lg:col-span-7">
-          <div className="bg-surface-container p-6 sm:p-12 border-2 border-primary relative overflow-hidden group rounded-none shadow-[8px_8px_0px_0px_rgba(var(--primary-rgb),1)]">
-            <div className="mb-12">
+          <div className="bg-surface-container p-6 sm:p-12 border-2 border-primary relative overflow-hidden group rounded-none shadow-[8px_8px_0px_0px_rgba(var(--primary-rgb),0.1)]">
+            <div className="absolute top-0 right-0 w-full h-full pointer-events-none opacity-5">
+              <div className="ai-data-stream absolute inset-0"></div>
+            </div>
+            
+            <div className="mb-12 relative z-10">
               <div className="flex items-center gap-4 mb-4 min-w-0 flex-wrap">
-  <Share2 className="w-8 h-8 text-primary shrink-0" />
-
-  <h2 className="font-brutal text-2xl sm:text-3xl md:text-4xl font-black tracking-tighter uppercase min-w-0">
-    <span className="bg-primary text-on-primary px-3 py-1 inline-block max-w-full break-all">
-      NEURAL_CONNECT
-    </span>
-  </h2>
-</div>
-              <p className="text-[10px] text-primary/60 font-mono tracking-[0.4em] uppercase font-black">INITIATE DIRECT ENCRYPTED COMMUNICATION CHANNEL</p>
+                <Share2 className="w-8 h-8 text-primary shrink-0 ai-glow-primary" />
+                <h2 className="font-brutal text-2xl sm:text-3xl md:text-4xl font-black tracking-tighter uppercase min-w-0">
+                  <span className="bg-primary text-on-primary px-3 py-1 inline-block max-w-full break-all">
+                    NEURAL_CONNECT
+                  </span>
+                </h2>
+              </div>
+              <p className="text-[10px] text-primary/60 font-mono tracking-[0.4em] uppercase font-black">ENCRYPTED_UPLINK_ACTIVE</p>
             </div>
 
             <form 
-              className="space-y-10" 
+              className="space-y-10 relative z-10" 
               onSubmit={(e) => {
                 e.preventDefault();
                 const formData = new FormData(e.currentTarget);
@@ -86,9 +91,10 @@ export default function ContactPage() {
 
         {/* Nodes */}
         <div className="lg:col-span-5 space-y-12">
-          <div className="bg-surface-container p-6 sm:p-12 border-2 border-primary rounded-none">
-            <h4 className="font-mono text-[10px] text-primary/40 tracking-[0.5em] uppercase mb-16 text-center font-black">EXTERNAL_NODES</h4>
-            <div className="grid grid-cols-2 gap-4 sm:gap-8">
+          <div className="bg-surface-container p-6 sm:p-12 border-2 border-primary rounded-none relative overflow-hidden">
+            <div className="absolute inset-0 tech-grid-bg opacity-5"></div>
+            <h4 className="font-mono text-[10px] text-primary/40 tracking-[0.5em] uppercase mb-16 text-center font-black relative z-10">NETWORK_TOPOLOGY</h4>
+            <div className="grid grid-cols-2 gap-4 sm:gap-8 relative z-10">
               {[
                 { name: 'GITHUB', icon: Github, url: 'https://github.com/KaRtHiK-56' },
                 { name: 'LINKEDIN', icon: Linkedin, url: 'https://www.linkedin.com/in/l-karthik/' },
@@ -100,10 +106,10 @@ export default function ContactPage() {
                   href={node.url} 
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex flex-col items-center gap-4 sm:gap-6 p-4 sm:p-8 rounded-none bg-surface-container-low border-2 border-primary/20 hover:border-primary hover:bg-primary transition-all group"
+                  className="flex flex-col items-center gap-4 sm:gap-6 p-4 sm:p-8 rounded-none bg-surface-container-low border-2 border-primary/20 hover:border-primary hover:bg-primary transition-all group relative"
                 >
-                  <div className="w-12 h-12 sm:w-16 h-16 flex items-center justify-center rounded-none bg-primary/10 group-hover:bg-on-surface transition-all">
-                    <node.icon className="w-6 h-6 sm:w-8 h-8 text-primary group-hover:text-surface" />
+                  <div className="w-12 h-12 sm:w-16 h-16 flex items-center justify-center rounded-none bg-primary/10 group-hover:bg-on-surface transition-all ai-neural-node">
+                    <node.icon className="w-6 h-6 sm:w-8 h-8 text-primary group-hover:text-surface relative z-10" />
                   </div>
                   <span className="font-mono text-[9px] sm:text-[10px] font-black tracking-[0.2em] text-primary/40 group-hover:text-on-surface transition-colors">{node.name}</span>
                 </a>
