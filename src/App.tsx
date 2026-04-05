@@ -3,6 +3,7 @@ import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
 import { CustomCursor } from './components/CustomCursor';
 import { BackgroundGraphics } from './components/BackgroundGraphics';
+import { AnalyticsTracker } from './components/AnalyticsTracker';
 import ScrollToTop from './components/ScrollToTop';
 import { ThemeProvider } from './context/ThemeContext';
 import Home from './pages/Home';
@@ -11,12 +12,14 @@ import Projects from './pages/Projects';
 import Stack from './pages/Stack';
 import Timeline from './pages/Timeline';
 import Contact from './pages/Contact';
+import Games from './pages/Games';
 
 export default function App() {
   return (
     <ThemeProvider>
       <Router>
         <ScrollToTop />
+        <AnalyticsTracker />
         <div className="min-h-screen bg-background tech-grid-bg transition-colors duration-300 relative overflow-hidden">
           <CustomCursor />
           <BackgroundGraphics />
@@ -35,6 +38,7 @@ export default function App() {
                 <Route path="/stack" element={<Stack />} />
                 <Route path="/timeline" element={<Timeline />} />
                 <Route path="/contact" element={<Contact />} />
+                <Route path="/games" element={<Games />} />
               </Routes>
             </div>
           </main>

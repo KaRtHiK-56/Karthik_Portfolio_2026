@@ -12,6 +12,7 @@ const NAV_LINKS = [
   { name: 'Experience', path: '/timeline' },
   { name: 'Stack', path: '/stack' },
   { name: 'Contact', path: '/contact' },
+  { name: 'Games', path: '/games' },
 ];
 
 export function Navbar() {

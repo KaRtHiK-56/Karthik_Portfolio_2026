@@ -1,0 +1,41 @@
+{
+  "entities": {
+    "User": {
+      "title": "User",
+      "description": "User profile information",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string", "description": "Firebase Auth UID" },
+        "username": { "type": "string", "description": "Display name for the leaderboard" },
+        "createdAt": { "type": "string", "format": "date-time", "description": "Account creation timestamp" }
+      },
+      "required": ["uid", "username", "createdAt"]
+    },
+    "Score": {
+      "title": "Score",
+      "description": "Game high score entry",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string", "description": "User UID" },
+        "username": { "type": "string", "description": "Username at the time of score" },
+        "score": { "type": "number", "description": "The high score value" },
+        "timestamp": { "type": "string", "format": "date-time", "description": "When the score was achieved" }
+      },
+      "required": ["uid", "username", "score", "timestamp"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": "User",
+      "description": "User profile documents"
+    },
+    "/scores/{scoreId}": {
+      "schema": "Score",
+      "description": "Leaderboard score entries"
+    },
+    "/leaderboard/{userId}": {
+      "schema": "Score",
+      "description": "Best score per user"
+    }
+  }
+}
