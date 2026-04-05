@@ -33,31 +33,38 @@ service cloud.firestore {
 
     function isValidUser(data) {
       return data.keys().hasAll(['uid', 'username', 'createdAt']) &&
+             data.keys().hasOnly(['uid', 'username', 'createdAt']) &&
              data.uid == request.auth.uid &&
              data.username is string &&
              data.username.size() >= 3 &&
-             data.username.size() <= 20;
+             data.username.size() <= 20 &&
+             data.createdAt is timestamp;
     }
 
     function isValidScore(data) {
       return data.keys().hasAll(['uid', 'username', 'score', 'timestamp']) &&
+             data.keys().hasOnly(['uid', 'username', 'score', 'timestamp']) &&
              data.uid == request.auth.uid &&
              data.score is number &&
              data.score >= 0 &&
-             data.username is string;
+             data.score <= 1000000 &&
+             data.username is string &&
+             data.username.size() <= 20 &&
+             data.timestamp is timestamp;
     }
 
     match /users/{userId} {
       allow read: if isAuthenticated();
       allow create: if isOwner(userId) && isValidUser(request.resource.data);
       allow update: if isOwner(userId) && isValidUser(request.resource.data) && 
-                      request.resource.data.uid == resource.data.uid;
+                      request.resource.data.uid == resource.data.uid &&
+                      request.resource.data.createdAt == resource.data.createdAt;
     }
 
     match /scores/{scoreId} {
-      allow read: if true; // Leaderboard is public
+      allow read: if true;
       allow create: if isAuthenticated() && isValidScore(request.resource.data);
-      allow delete, update: if false; // Scores are immutable
+      allow delete, update: if false;
     }
 
     match /leaderboard/{userId} {
