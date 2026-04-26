@@ -1,5 +1,6 @@
 import { motion } from 'motion/react';
 import { Bot, Brain, Zap, Rocket, Terminal } from 'lucide-react';
+import profilePic from '../assets/profile_karthik.png';
 
 export default function AboutPage() {
   return (
@@ -41,7 +42,7 @@ export default function AboutPage() {
         <div className="md:col-span-4 relative z-10">
           <div className="aspect-square rounded-none overflow-hidden border-2 border-primary bg-surface relative group shadow-[8px_8px_0px_0px_rgba(var(--primary-rgb),0.1)]">
             <img 
-              src="/profile_karthik.png" 
+              src={profilePic} 
               alt="Karthik L" 
               className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
               referrerPolicy="no-referrer"
