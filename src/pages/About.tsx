@@ -12,7 +12,7 @@ export default function AboutPage() {
           className="flex items-center gap-3 mb-6"
         >
           <div className="h-[1px] w-12 bg-primary"></div>
-          <span className="font-mono text-primary text-[10px] tracking-[0.5em] uppercase font-black">AI_ENGINEER_PROFILE // v4.0</span>
+          <span className="font-mono text-primary text-[10px] tracking-[0.5em] uppercase font-black">AI_ENGINEER_PROFILE</span>
         </motion.div>
         
         <motion.h1 
@@ -31,7 +31,7 @@ export default function AboutPage() {
           transition={{ delay: 0.2 }}
           className="max-w-2xl text-on-surface-variant font-display text-2xl leading-relaxed ai-prompt-cursor"
         >
-          AI Engineer with a passion for building intelligent systems that solve real-world problems.
+          AI Engineer with a passion for building intelligent systems.
         </motion.p>
       </section>
 
@@ -41,16 +41,12 @@ export default function AboutPage() {
         <div className="md:col-span-4 relative z-10">
           <div className="aspect-square rounded-none overflow-hidden border-2 border-primary bg-surface relative group shadow-[8px_8px_0px_0px_rgba(var(--primary-rgb),0.1)]">
             <img 
-              src="https://picsum.photos/seed/karthik/600/600" 
+              src="/profile_karthik.png" 
               alt="Karthik L" 
               className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
               referrerPolicy="no-referrer"
             />
-            <div className="absolute inset-0 bg-background/40 opacity-60"></div>
-            <div className="absolute bottom-6 left-6 bg-primary text-on-primary px-4 py-2 transform -skew-x-12 ai-glow-primary">
-              <h2 className="font-brutal text-2xl font-black uppercase">Karthik L</h2>
-              <p className="font-mono text-[10px] font-black tracking-widest">AI_ENGINEER_V4</p>
-            </div>
+            <div className="absolute inset-0 bg-background/40 opacity-20 group-hover:opacity-0 transition-opacity"></div>
           </div>
         </div>
         
